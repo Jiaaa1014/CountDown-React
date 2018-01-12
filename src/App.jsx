@@ -7,13 +7,14 @@ class App extends Component {
   constructor(props) {
     super(props);
     this.state = {
-      deadline: "Decemeber 28, 2018",
+      deadline: "Dec 28, 2018",
       newDeadLine: ""
     };
   }
 
   changeDeadline() {
     this.setState({ deadline: this.state.newDeadLine });
+    console.log(this.state.deadline);
   }
 
   render() {
@@ -26,9 +27,9 @@ class App extends Component {
             className="Deadline-input"
             placeholder="new date"
             onChange={e => this.setState({ newDeadLine: e.target.value })}
-            onKeyPress={e => {
-              if (e.key === "Enter") document.getElementById("sub").click();
-            }}
+            // onKeyPress={e => {
+            //   if (e.key === "Enter") document.getElementById("sub").click();
+            // }}
           />
           <Button
             id="sub"

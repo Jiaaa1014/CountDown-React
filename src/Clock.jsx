@@ -17,6 +17,7 @@ class Clock extends Component {
   }
   // render之後，可以每幾秒執行一次getTimeUntil()
   componentDidMount() {
+    console.log(this.props.deadline);
     setInterval(() => {
       this.getTimeUntil(this.props.deadline);
     }, 1000);
@@ -37,7 +38,6 @@ class Clock extends Component {
   }
 
   render() {
-    // console.log(new Date());
     return (
       <div>
         <div className="Clock-days">{this.leading(this.state.days)} days</div>

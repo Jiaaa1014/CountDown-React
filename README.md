@@ -1,8 +1,10 @@
 ### Notes
-* Form
-`Form, FormControl, InputGroup` difference?
 
-* 
+* Form
+  `Form, FormControl, InputGroup` difference?
+
+*
+
 ```js
 // Clock.jsx
   getTimeUntil(deadline) {
@@ -21,5 +23,14 @@
   leading(num) {
     return num < 10 ? "0" + num : num;
 }
-
 ```
+
+* `Date.parse(time)`，time 的格式過於制式化，容易出錯
+
+許可：
+
+1. 2 26, 2018
+2. 2018 02 26
+3. 26 Feb 2018
+4. 12 Dec, 2018
+5. 2018/02/26
