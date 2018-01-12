@@ -1,5 +1,8 @@
 ### Notes
+##### Template
+![](https://github.com/Jiaaa1014/CountDown-React/blob/master/public/CountDown.gif)
 
+##### codes
 * Form
   `Form, FormControl, InputGroup` difference?
 
@@ -25,10 +28,8 @@
 }
 ```
 
-* `Date.parse(time)`，time 的格式過於制式化，容易出錯
-
+##### `Date.parse(time)`，time 的格式過於制式化，容易出錯
 許可：
-
 1. 2 26, 2018
 2. 2018 02 26
 3. 26 Feb 2018
