@@ -1,40 +1,40 @@
-import React, { Component } from "react";
-import "./App.css";
+import React, { Component } from 'react'
+import './App.css'
 
 class Clock extends Component {
   constructor(props) {
-    super(props);
+    super(props)
     this.state = {
       days: 0,
       hours: 0,
       minutes: 0,
       seconds: 0
-    };
+    }
   }
+
 
   componentWillMount() {
-    this.getTimeUntil(this.props.deadline);
-  }
-  // render之後，可以每幾秒執行一次getTimeUntil()
-  componentDidMount() {
-    console.log(this.props.deadline);
-    setInterval(() => {
-      this.getTimeUntil(this.props.deadline);
-    }, 1000);
+    this.getTimeUntil(this.props.deadline)
   }
 
-  leading(num) {
-    return num < 10 ? "0" + num : num;
+  componentDidMount() {
+    setInterval(() => {
+      this.getTimeUntil(this.props.deadline)
+    }, 1000)
   }
+
+  leading(num) { return num < 10 ? `0 + ${num}` : num }
 
   getTimeUntil(deadline) {
-    const time = Date.parse(deadline) - Date.parse(new Date());
-    const seconds = Math.floor((time / 1000) % 60),
-      minutes = Math.floor((time / 1000 / 60) % 60),
-      hours = Math.floor((time / 1000 / 60 / 60) % 24),
-      days = Math.floor(time / 1000 / 60 / 60 / 24);
+    const time = Date.parse(deadline) - Date.parse(new Date())
+    const seconds = Math.floor((time / 1000) % 60)
+    const minutes = Math.floor((time / 1000 / 60) % 60)
+    const hours = Math.floor((time / 1000 / 60 / 60) % 24)
+    const days = Math.floor(time / 1000 / 60 / 60 / 24)
 
-    this.setState({ days, hours, minutes, seconds });
+    this.setState({
+      days, hours, minutes, seconds
+    })
   }
 
   render() {
@@ -51,8 +51,8 @@ class Clock extends Component {
           {this.leading(this.state.seconds)} seconds
         </div>
       </div>
-    );
+    )
   }
 }
 
-export default Clock;
+export default Clock

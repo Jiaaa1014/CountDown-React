@@ -1,0 +1,20 @@
+{
+    "parser": "babel-eslint",
+    "env": {
+        "browser": true,
+        "node": true
+    },
+    "extends": "airbnb-base",
+    "plugins": [
+        "react"
+    ],
+    "rules": {
+        "semi": [2, "never"],
+        "arrow-body-style": ["error", "as-needed"],
+        "comma-dangle": ["error", "never"],
+        "no-console": 0,
+        "class-methods-use-this": "off",
+        "react/jsx-uses-vars": "error",
+        "react/jsx-uses-react": "error"
+    }
+}
