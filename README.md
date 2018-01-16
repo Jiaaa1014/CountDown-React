@@ -1,8 +1,8 @@
 ### Notes
-##### Template
+#### Template
 ![](https://github.com/Jiaaa1014/CountDown-React/blob/master/public/CountDown.gif)
 
-##### codes
+#### codes
 * Form
   `Form, FormControl, InputGroup` difference?
 
@@ -28,16 +28,15 @@
 }
 ```
 
-##### `Date.parse(time)`，time 的格式過於制式化，容易出錯
-許可：
-###### 斜線-由大到小
+#### `Date.parse(time)`，time 的格式過於制式化，容易出錯
+##### 許可，參考[這](https://eyesofkids.gitbooks.io/javascript-start-from-es6/content/part3/datetime.html)
+###### (using slash)
 1. 2018/07/12 15:34
 2. 2018/7/12 15:34:56
-###### 斜線-`年`在後
 3. 07/12/2018 15:29
 4. 7/12/2018
 
-###### ISO 8601 hyphen
+###### ISO 8601 (using hyphen)
 `YYYY-MM-DDTHH:mm:ss.sssZ`
 `T`分割日期v.s時鐘，可以以空格代替，`Z`代表UTC
 `1.`如果是台灣，則`2.`代表倒數時間為UTC標準，`3.`自己選
