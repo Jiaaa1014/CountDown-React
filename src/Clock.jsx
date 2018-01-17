@@ -1,5 +1,7 @@
 import React, { Component } from 'react'
+import PropTypes from 'prop-types'
 import './App.css'
+
 
 class Clock extends Component {
   constructor(props) {
@@ -11,7 +13,6 @@ class Clock extends Component {
       seconds: 0
     }
   }
-
 
   componentWillMount() {
     this.getTimeUntil(this.props.deadline)
@@ -54,6 +55,10 @@ class Clock extends Component {
       </div>
     )
   }
+}
+
+Clock.propTypes = {
+  deadline: PropTypes.func.isRequired
 }
 
 export default Clock
