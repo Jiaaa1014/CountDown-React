@@ -105,3 +105,47 @@ DD MMM, YYYY
     }
 }
 ```
+```js
+{
+    "parser": "babel-eslint",
+    "env": {
+        "browser": true,
+        "node": true
+    },
+    "extends": "airbnb",
+    "plugins": [
+        "react"
+    ],
+    "rules": {
+        "semi": [
+            2,
+            "never"
+        ],
+        // 視情況 ()=> {兩行以上要curly}
+        "arrow-body-style": [
+            "error",
+            "as-needed"
+        ],
+        // 別逼我在物件最後一項加","
+        "comma-dangle": [
+            "error",
+            "never"
+        ],
+        "no-console": 0,
+        // 別逼我用this
+        "class-methods-use-this": "off",
+        // 避免eslint在import module跟你吵
+        "react/jsx-uses-vars": "error",
+        "react/jsx-uses-react": "error",
+        "react/jsx-filename-extension": [
+            1,
+            {
+                "extensions": [
+                    ".js",
+                    ".jsx"
+                ]
+            }
+        ]
+    }
+}
+```
