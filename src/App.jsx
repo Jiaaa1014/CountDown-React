@@ -2,7 +2,7 @@ import React, { Component } from 'react'
 import { Form, FormControl, Button } from 'react-bootstrap'
 // absolute path import first.
 import './App.css'
-import Clock from './Clock.jsx'
+import Clock from './Clock'
 
 class App extends Component {
   constructor(props) {

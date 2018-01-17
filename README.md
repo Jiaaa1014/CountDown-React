@@ -86,32 +86,6 @@ DD MMM, YYYY
         "browser": true,
         "node": true
     },
-    "extends": "airbnb-base",
-    "plugins": [
-        "react"
-    ],
-    "rules": {
-        "semi": [2, "never"],
-        // 視情況 ()=> {兩行以上要curly}
-        "arrow-body-style": ["error", "as-needed"],
-        "comma-dangle": ["error", "never"],
-        // 我需要console.log
-        "no-console": 0,
-        // 避免逼你用this？
-        "class-methods-use-this": "off",
-        // 避免eslint在import module跟你吵
-        "react/jsx-uses-vars": "error",
-        "react/jsx-uses-react": "error"
-    }
-}
-```
-```js
-{
-    "parser": "babel-eslint",
-    "env": {
-        "browser": true,
-        "node": true
-    },
     "extends": "airbnb",
     "plugins": [
         "react"
