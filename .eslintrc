@@ -14,17 +14,17 @@
             "never"
         ],
         "arrow-body-style": [
-            "error",
+            2,
             "as-needed"
         ],
         "comma-dangle": [
-            "error",
+            2,
             "never"
         ],
         "no-console": 0,
-        "class-methods-use-this": "off",
-        "react/jsx-uses-vars": "error",
-        "react/jsx-uses-react": "error",
+        "class-methods-use-this": 0,
+        "react/jsx-uses-vars": 2,
+        "react/jsx-uses-react": 2,
         "react/jsx-filename-extension": [
             1,
             {

@@ -57,7 +57,7 @@ ddd, DD MMM YYYY HH:mm:ss ZZ
 MMM DD, YYYY
 DD MMM, YYYY
 ```
-**隨便在哪加`,`不會影響
+**隨便在哪加`,`不會影響**
 ```
 1. 17 Jan 2018
 2. Jan 17, 2018
@@ -97,20 +97,20 @@ DD MMM, YYYY
         ],
         // 視情況 ()=> {兩行以上要curly}
         "arrow-body-style": [
-            "error",
+            2,
             "as-needed"
         ],
         // 別逼我在物件最後一項加","
         "comma-dangle": [
-            "error",
+            2,
             "never"
         ],
         "no-console": 0,
         // 別逼我用this
         "class-methods-use-this": "off",
         // 避免eslint在import module跟你吵
-        "react/jsx-uses-vars": "error",
-        "react/jsx-uses-react": "error",
+        "react/jsx-uses-vars": 2,
+        "react/jsx-uses-react": 2,
         "react/jsx-filename-extension": [
             1,
             {

@@ -1,5 +1,6 @@
 import React, { Component } from 'react'
 import PropTypes from 'prop-types'
+import path from 'path'
 import './App.css'
 
 
@@ -40,6 +41,7 @@ class Clock extends Component {
   leading(num) { return num < 10 ? `0${num}` : num }
 
   render() {
+    console.log(path.join(path.join(__dirname, '../'), './node_modules'))
     return (
       <div>
         <div className="Clock-days">{this.leading(this.state.days)} days</div>
@@ -58,7 +60,7 @@ class Clock extends Component {
 }
 
 Clock.propTypes = {
-  deadline: PropTypes.func.isRequired
+  deadline: PropTypes.string.isRequired
 }
 
 export default Clock
