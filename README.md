@@ -1,13 +1,10 @@
 # Notes
-### Template
+## Template
 ![](https://github.com/Jiaaa1014/CountDown-React/blob/master/public/CountDown.gif)
 
-### Codes
-* Form
-  `Form, FormControl, InputGroup` difference?
+## Codes
 
-*
-
+* 時間轉換
 ```js
 // Clock.jsx
   getTimeUntil(deadline) {
@@ -20,7 +17,7 @@
     this.setState({ days, hours, minutes, seconds });
 }
 ```
-
+* 補位0
 ```js
 // Clock.jsx
   leading(num) {
@@ -28,20 +25,22 @@
 }
 ```
 
-### `Date.parse(time)`，time 的格式不熟，容易出錯，參考[這](https://eyesofkids.gitbooks.io/javascript-start-from-es6/content/part3/datetime.html)
+## 各種標準的時間格式
 
-#### Using slash
+* refs:[這](https://eyesofkids.gitbooks.io/javascript-start-from-es6/content/part3/datetime.html)
+
+### Using slash
 ```
 1. 2018/07/12 15:34
 2. 2018/7/12 15:34:56
 3. 07/12/2018 15:29
 4. 7/12/2018
 ```
-
-#### ISO 8601 (Using hyphen)
+---
+### ISO 8601 (Using hyphen)
 
 `YYYY-MM-DDTHH:mm:ss.sssZ`
-`T`分割日期v.s時鐘，可以以空格代替，`Z`代表UTC
+`T`分割，可以以空格代替，`Z`代表UTC
 `1.`如果是台灣，則`2.`代表倒數時間為UTC標準，`3.`自己選
 ```
 1. 2018-01-17T15:30
@@ -50,7 +49,8 @@
 4. 2018-01-16T15:50+0800
 5. 2018-01-17
 ```
-#### RFC 2822 (天、月變成字串)
+---
+### RFC 2822 (天、月變成字串)
 
 ```
 ddd, DD MMM YYYY HH:mm:ss ZZ
@@ -67,7 +67,7 @@ DD MMM, YYYY
 6. Jan 16, 2018 15:52:59 +0800
 ```
 
-### 使用eslint
+## Eslint
 ```js
 "devDependencies": {
     "babel-eslint": "^8.2.1",
@@ -106,9 +106,7 @@ DD MMM, YYYY
             "never"
         ],
         "no-console": 0,
-        // 別逼我用this
         "class-methods-use-this": "off",
-        // 避免eslint在import module跟你吵
         "react/jsx-uses-vars": 2,
         "react/jsx-uses-react": 2,
         "react/jsx-filename-extension": [
