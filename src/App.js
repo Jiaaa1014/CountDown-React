@@ -34,7 +34,6 @@ class App extends Component {
             }}
           />
           <Button
-            type="button"
             id="sub"
             className="btn btn-secondary"
             onClick={() => { this.changeDeadline() }}
