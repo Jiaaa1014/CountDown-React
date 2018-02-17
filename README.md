@@ -85,7 +85,6 @@ DD MMM, YYYY
 // App.js
 <FormControl
   className="Deadline-input"
-  placeholder="new date"
   onChange={e => this.setState({ newDeadLine: e.target.value })}
   onKeyPress={(e) => {
     if (e.key === 'Enter') {
@@ -96,3 +95,8 @@ DD MMM, YYYY
   }}
 />
 ```
+
+## 副檔名
+
+原先`Clock.jsx`和`App.js`在同一層，無法修改jsx為js
+前者移動到新資料夾改副檔名可以用

@@ -1,6 +1,6 @@
 import React, { Component } from 'react'
 import { Form, FormControl, Button } from 'react-bootstrap'
-import Clock from './Clock'
+import Clock from './components/Clock'
 import './App.css'
 
 class App extends Component {

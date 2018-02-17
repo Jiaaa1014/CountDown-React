@@ -1,7 +1,7 @@
 import React, { Component } from 'react'
 import PropTypes from 'prop-types'
 import path from 'path'
-import './App.css'
+import '../App.css'
 
 
 class Clock extends Component {
