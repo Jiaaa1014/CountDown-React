@@ -77,47 +77,22 @@ DD MMM, YYYY
     "eslint-plugin-react": "^7.5.1"
   }
 ```
-`import`不須加入plugin但`react`要
+
+## Problem Solved
+`<input>`加上onkeyPress事件，然後使用`preventDefault()`避免頁面重新載入
 
 ```js
-{
-    "parser": "babel-eslint",
-    "env": {
-        "browser": true,
-        "node": true
-    },
-    "extends": "airbnb",
-    "plugins": [
-        "react"
-    ],
-    "rules": {
-        "semi": [
-            2,
-            "never"
-        ],
-        // 視情況 ()=> {兩行以上要curly}
-        "arrow-body-style": [
-            2,
-            "as-needed"
-        ],
-        // 別逼我在物件最後一項加","
-        "comma-dangle": [
-            2,
-            "never"
-        ],
-        "no-console": 0,
-        "class-methods-use-this": "off",
-        "react/jsx-uses-vars": 2,
-        "react/jsx-uses-react": 2,
-        "react/jsx-filename-extension": [
-            1,
-            {
-                "extensions": [
-                    ".js",
-                    ".jsx"
-                ]
-            }
-        ]
+// App.js
+<FormControl
+  className="Deadline-input"
+  placeholder="new date"
+  onChange={e => this.setState({ newDeadLine: e.target.value })}
+  onKeyPress={(e) => {
+    if (e.key === 'Enter') {
+      if (!e.target.value) return
+      e.preventDefault()
+      this.changeDeadline()
     }
-}
+  }}
+/>
 ```

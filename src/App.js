@@ -26,8 +26,16 @@ class App extends Component {
             className="Deadline-input"
             placeholder="new date"
             onChange={e => this.setState({ newDeadLine: e.target.value })}
+            onKeyPress={(e) => {
+              if (e.key === 'Enter') {
+                if (!e.target.value) return
+                e.preventDefault()
+                this.changeDeadline()
+              }
+            }}
           />
           <Button
+            type="button"
             id="sub"
             className="btn btn-secondary"
             onClick={() => { this.changeDeadline() }}

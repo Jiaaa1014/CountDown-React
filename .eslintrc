@@ -13,10 +13,6 @@
             2,
             "never"
         ],
-        "arrow-body-style": [
-            2,
-            "as-needed"
-        ],
         "comma-dangle": [
             2,
             "never"
