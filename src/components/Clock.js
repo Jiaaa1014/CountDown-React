@@ -41,10 +41,12 @@ class Clock extends Component {
   leading(num) { return num < 10 ? `0${num}` : num }
 
   render() {
-    console.log(path.join(path.join(__dirname, '../'), './node_modules'))
+    console.log(path.join(__dirname))
     return (
       <div>
-        <div className="Clock-days">{this.leading(this.state.days)} days</div>
+        <div className="Clock-days">
+          {this.leading(this.state.days)} days
+        </div>
         <div className="Clock-hours">
           {this.leading(this.state.hours)} hours
         </div>
