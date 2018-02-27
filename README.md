@@ -2,6 +2,25 @@
 ## Template
 ![](https://github.com/Jiaaa1014/CountDown-React/blob/master/public/CountDown.gif)
 
+## files
+* `Clock.js`控制時間的單位、顯示方式
+  
+    ```js
+    componentDidMount() {
+      setInterval(() => {
+        this.getTimeUntil(this.props.deadline)
+      }, 1000)
+    }
+    ```
+* `App.js`，表單改變要倒數的時間
+
+    ```js
+    changeDeadline() {
+      this.setState({ deadline: this.state.newDeadLine })
+    }
+    ```
+    傳給`Clock.js`隨之更新
+
 ## Codes
 
 * 時間轉換
@@ -98,5 +117,5 @@ DD MMM, YYYY
 
 ## 副檔名
 
-原先`Clock.jsx`和`App.js`在同一層，無法修改jsx為js
-前者移動到新資料夾改副檔名可以用
+原先`Clock.jsx`和`App.js`在同一層，無法修改`jsx`為`js`
+前者移動到新資料夾改副檔名`js`可以用
